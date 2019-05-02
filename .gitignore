@@ -26,10 +26,4 @@ gh-pages/
 pkg/
 test/dest
 tmp/*
-_includes/
-_layouts/
-_pages/
-_posts/
-_sass/
-assets/
 

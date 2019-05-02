@@ -31,3 +31,4 @@ workbox.routing.registerRoute(
   'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700',
   workbox.strategies.staleWhileRevalidate()
 );
+ 
