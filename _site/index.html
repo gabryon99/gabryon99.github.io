@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="http://localhost:4000/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FF7378">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@gabripappa">
+  <meta name="twitter:title" content="Home">
+  <meta name="twitter:description" content="A simple blog to discuss about my game LightPink">
+  <meta property="twitter:image:src" content="http://localhost:4000/assets/logo.png">
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="og:url" content="http://localhost:4000/">
+  <meta property="og:title" content="Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://localhost:4000/assets/logo.png">
+  <meta property="og:description" content="A simple blog to discuss about my game LightPink">
+  <meta property="og:site_name" content="LightPink Blog">
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="LightPink Blog" href="http://localhost:4000/feed.xml" />
+
+  <!-- Push Notifications -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "29f7ff40-be77-423c-8748-e60f978bb0ca",
+      });
+    });
+  </script>
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Home | LightPink Blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Gabriele Pappalardo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A simple blog to discuss about my game LightPink" />
+<meta property="og:description" content="A simple blog to discuss about my game LightPink" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="LightPink Blog" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Gabriele Pappalardo"},"description":"A simple blog to discuss about my game LightPink","@type":"WebSite","url":"http://localhost:4000/","name":"LightPink Blog","headline":"Home","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://localhost:4000/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register("http://localhost:4000/sw.js").then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon.png">
+
+  <!-- RSS -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="LightPink Blog" />
+
+  <!-- Google Analytics-->
+  
+</head>
+
+  <body>
+
+    <nav class="nav">
+  <div class="nav-container">
+    <a href="http://localhost:4000/">
+      <h2 class="nav-title">LightPink Blog</h2>
+    </a>
+    <ul>
+      <li><a href="http://localhost:4000/about">About</a></li>
+      <li><a href="http://localhost:4000/">Posts</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <main>
+      <div class="catalogue">
+  
+    <a href="http://localhost:4000/2019-05-01/first-artwork" class="catalogue-item">
+      <div>
+        <time datetime="2019-05-01 00:00:00 +0200" class="catalogue-time">May 01, 2019</time>
+        <h1 class="catalogue-title">Artwork Time! #1</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          What is Artwork Time? It’s a series of post where I share some artworks that my friends made for me, ‘cuz I’m not good at drawing. So the first artwork...
+        </p>
+
+      </div>
+    </a>
+  
+    <a href="http://localhost:4000/2019-04-30/hello-world" class="catalogue-item">
+      <div>
+        <time datetime="2019-04-30 00:00:00 +0200" class="catalogue-time">April 30, 2019</time>
+        <h1 class="catalogue-title">Hello World!</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          Hi everybody! I’m Gabriele Pappalardo (a.k.a. gabryon99 on the web), I’m an almost 20 years old italian guy who is studying right now at Pisa IT Department University. I thought...
+        </p>
+
+      </div>
+    </a>
+  
+    <a href="http://localhost:4000/2019-04-30/hello-world-italian" class="catalogue-item">
+      <div>
+        <time datetime="2019-04-30 00:00:00 +0200" class="catalogue-time">April 30, 2019</time>
+        <h1 class="catalogue-title">Hello World! - Italian Version</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          Ciao a tutti! Sono Gabriele Pappalardo (a.k.a. gabryon99 sul web), sono un ragazzo di quasi 20 anni che frequenta l’università di Pisa nel dipartimento di informatica. Ho pensato di creare...
+        </p>
+
+      </div>
+    </a>
+  
+</div>
+
+<div class="pagination">
+  
+  
+
+  <span>1</span>
+</div>
+
+    </main>
+
+    <footer>
+  <div class='onesignal-customlink-container'></div>
+  <span>
+    &copy; <time datetime="2019-05-02 15:17:58 +0200">2019</time> Gabriele Pappalardo.
+    Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+    A huge thanks to <a href="https://gitlab.com/domenicoblanco">@domenicoblanco</a> that
+    helped me to put online the blog!
+  </span>
+</footer>
+
+  </body>
+</html>

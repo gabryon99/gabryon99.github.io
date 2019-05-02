@@ -1,0 +1,16 @@
+{
+	"short_name": "Light Pink Blog",
+	"name": "Ligth Pink Blog",
+	"start_url": "/lightpinkblog/index.html",
+	"icons": [{
+		"src": "assets/logo.png",
+		"sizes": "any",
+		"type": "image/png"
+	}],
+	"theme_color": "#FF7378",
+	"background_color": "#FF7378",
+	"display": "standalone",
+	"orientation": "portrait-primary",
+	"gcm_sender_id": "482941778795",
+  	"gcm_sender_id_comment": "Do not change the GCM Sender ID"
+}
