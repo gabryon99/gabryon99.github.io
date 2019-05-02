@@ -1,7 +1,7 @@
 {
 	"short_name": "Light Pink Blog",
 	"name": "Ligth Pink Blog",
-	"start_url": "/lightpinkblog/index.html",
+	"start_url": "/",
 	"icons": [{
 		"src": "assets/logo.png",
 		"sizes": "any",
