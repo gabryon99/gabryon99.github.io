@@ -70,7 +70,8 @@
 @media (max-width: 600px) {
   .post {
     &-responsive-image {
-      height: 200px !important;
+      height: 180px !important;
+      /* 600:16 = x : 9*/
       width: 600px;
     }
   }
