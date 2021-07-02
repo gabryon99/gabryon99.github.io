@@ -17,3 +17,35 @@
 .ntop {
     color: #ff7500;
 }
+.container {
+    border: 1px solid #414246;
+    border-radius: 0.25rem;
+}
+.titlebar {
+    background-color: #2A252F;
+    height: 28px;
+    border-bottom: 1px solid;
+    border-bottom-color: #000;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+.titlebar-buttons {
+    margin-left: 12px;
+}
+.titlebar .terminal-button {
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+}
+.titlebar .terminal-button.red {
+    background-color: #FF5F57;
+}
+.titlebar .terminal-button.yellow {
+    background-color: #FEBC2E;
+    margin: 0 4px;
+}
+.titlebar .terminal-button.green {
+    background-color: #28C840;
+}

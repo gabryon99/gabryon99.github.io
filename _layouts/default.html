@@ -18,14 +18,23 @@
 </head>
 <body>
     {% include navigation.html %}
-    <div class="container p-1">
-        <h1 class="title is-3 monospace">
-            <span class='has-text-success'>~</span>/site <span class="has-text-info">❯</span> <span id="command" style='display: none;'>less {{ page.title }}.html</span>
-        </h1>
-        <div class="my-2 p-2" id="content" style="display: none;">
-            {{ content }}
-            <div class="end monospace mt-4">
-                {{ page.title }}.html (END)
+    <div class="px-2">
+        <div class="container">
+            <div class="titlebar">
+                <div class="titlebar-buttons">
+                    <span class="terminal-button red"></span>
+                    <span class="terminal-button yellow"></span>
+                    <span class="terminal-button green"></span>
+                </div>
+            </div>
+            <h1 class="title is-4 mb-3 px-2 monospace">
+                <span class='has-text-success'>~</span>/site <span class="has-text-info">❯</span> <span id="command" style='display: none;'>less {{ page.title }}.html</span>
+            </h1>
+            <div class="p-2" id="content" style="opacity: 0;">
+                {{ content }}
+                <div class="end monospace mt-4">
+                    {{ page.title }}.html (END)
+                </div>
             </div>
         </div>
     </div>
@@ -43,7 +52,7 @@
 
             if (textCommand == $command.text()) {
                 clearInterval(intervalId);
-                $content.fadeIn(100);
+                $content.fadeTo(100, 1);
                 return;
             }
 
