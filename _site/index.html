@@ -20,7 +20,7 @@
     <nav class="navbar mb-2" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item monospace nav-title" href="/">
-            <b><span class="has-text-info">@</span>gabryon99</b>
+            <b><span class="has-text-info">@</span>gabryon</b>
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -85,6 +85,7 @@
         Recently I developed an Android game application for a university exam, go to check it out: <a href="https://github.com/gabryon99/RanchTheSheep">Ranch The Sheep</a>.
     </p>
 </div>
+
                 <div class="end monospace mt-4">
                     index.html (END)
                 </div>
@@ -112,6 +113,15 @@
             $command.text($command.text() + textCommand[index++]);
 
         }, 75);
+
+         // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+
+        });
 
     });
     </script>
