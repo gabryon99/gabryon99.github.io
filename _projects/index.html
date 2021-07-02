@@ -1,0 +1,17 @@
+---
+title:  projects
+layout: default
+subdir: /projects
+command: ls
+---
+<ul>
+    {% for project in site.projects %}
+        <li class="monospace is-size-5">
+            {% assign l = project.url | size %} 
+            {% assign name = project.url | slice: 10, l %}
+            {% unless name == "index.html" %}
+                <a href="{{ project.url }}">{{ name }}</a>
+            {% endunless %}
+        </li>
+    {% endfor %}
+</ul>

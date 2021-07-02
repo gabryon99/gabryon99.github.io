@@ -1,0 +1,12 @@
+global:
+  projects: Projects
+  github: GitHub
+  linkedin: Linkedin
+index:
+  recent_projects: Recent Projects 🎮
+  greetings: Hello there! 👋
+projects:
+  ranch_the_sheep: 
+    title: Ranch The Sheep 🐑
+    screenshots: Screenshots
+    body: <b>Ranch The Sheep</b> is a videogame created for the exam "Sviluppo di Applicazioni Mobile" (Development of Mobile Applications). The game uses the Android's WiFi P2P Framework so two players can play using different devices.

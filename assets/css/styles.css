@@ -49,3 +49,9 @@
 .titlebar .terminal-button.green {
     background-color: #28C840;
 }
+.slideshow {
+    overflow-x: scroll;
+    width: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+}

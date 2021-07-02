@@ -14,7 +14,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/brands.min.js" integrity="sha512-/XaemEMILXoHbq4OqufiqRIdtZSPdDeFzoRo5aif5oV67J+62uXHuPcK6O/70ltl2Mdu/V1kR0nlwly5YWgk/Q==" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <title>@gabryon99 | pages/about</title>
+    <title>@gabryon | ranch-the-sheep</title>
 </head>
 <body>
     <nav class="navbar mb-2" role="navigation" aria-label="main navigation">
@@ -28,19 +28,21 @@
             <span aria-hidden="true"></span>
         </a>
     </div>
-
     <div class="navbar-menu">
         <div class="navbar-start">
+            <a class="navbar-item" href="/projects/">
+                <i class="fas fa-microchip mr-1"></i> Projects
+            </a>
             <a class="navbar-item" href="https://github.com/gabryon99">
                 <i class="fab fa-github mr-1"></i> GitHub
             </a>
             <a class="navbar-item" href="https://www.linkedin.com/in/gabriele-pappalardo-3621b2154/">
-                <i class="fab fa-linkedin-in mr-1"></i> LinkedIn
+                <i class="fab fa-linkedin-in mr-1"></i> Linkedin
             </a>
         </div>
     </div>
 </nav>
-    <div class="px-2">
+    <div class="px-2 mb-3">
         <div class="container">
             <div class="titlebar">
                 <div class="titlebar-buttons">
@@ -50,51 +52,41 @@
                 </div>
             </div>
             <h1 class="title is-4 mb-3 px-2 monospace">
-                <span class='has-text-success'>~</span>/site <span class="has-text-info">❯</span> <span id="command" style='display: none;'>less pages/about.html</span>
+                <span class='has-text-success'>~</span>/site<span><a href="/projects">/projects</a></span><span class="has-text-info">❯</span>
+                
+                    <span id="command" style='display: none;'>less ranch-the-sheep.html</span>
+                
             </h1>
-            <div class="p-2" id="content" style="opacity: 0;">
-                <h2 class="title is-3" id="hello-world">Hello World</h2>
-
-<p>This is a simple blog where I write new thing that I discover! 👋</p>
-
+            <div id="content" class="p-2" style="opacity: 0;">
+                <h3 class="title is-3">
+    Ranch The Sheep 🐑
+</h3>
+<p class="has-text-justified">
+    <b>Ranch The Sheep</b> is a videogame created for the exam "Sviluppo di Applicazioni Mobile" (Development of Mobile Applications). The game uses the Android's WiFi P2P Framework so two players can play using different devices.
+</p>
+<hr>
+<h4 class="subtitle is-4">
+    Screenshots
+</h4>
+<p>These are some screenshots taken from the game:</p>
+<div class="slideshow mt-2">
+    <img src="/assets/img/projects/ranch-the-sheep/1.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/1-2.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/2.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/3.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/4.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/5.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/6.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/7.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/8.jpg" width="320">
+    <img src="/assets/img/projects/ranch-the-sheep/9.jpg" width="320">
+</div>
                 <div class="end monospace mt-4">
-                    pages/about.html (END)
+                    ranch-the-sheep.html (END)
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-    $(document).ready(function() {
-
-        const $command = $(`#command`);
-        const $content = $(`#content`);
-
-        const textCommand = $command.text();
-        $command.text('').show();
-
-        let index = 0;
-        const intervalId = setInterval(() => {
-
-            if (textCommand == $command.text()) {
-                clearInterval(intervalId);
-                $content.fadeTo(100, 1);
-                return;
-            }
-
-            $command.text($command.text() + textCommand[index++]);
-
-        }, 75);
-
-         // Check for click events on the navbar burger icon
-        $(".navbar-burger").click(function() {
-
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            $(".navbar-burger").toggleClass("is-active");
-            $(".navbar-menu").toggleClass("is-active");
-
-        });
-
-    });
-    </script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 </body>
 </html>

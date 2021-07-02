@@ -14,10 +14,34 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/brands.min.js" integrity="sha512-/XaemEMILXoHbq4OqufiqRIdtZSPdDeFzoRo5aif5oV67J+62uXHuPcK6O/70ltl2Mdu/V1kR0nlwly5YWgk/Q==" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <title>@gabryon | {{ page.title }}</title>
+    <title>@gabryon | projects</title>
 </head>
 <body>
-    {% include navigation.html %}
+    <nav class="navbar mb-2" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item monospace nav-title" href="/">
+            <b><span class="has-text-info">@</span>gabryon</b>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/projects/">
+                <i class="fas fa-microchip mr-1"></i> Projects
+            </a>
+            <a class="navbar-item" href="https://github.com/gabryon99">
+                <i class="fab fa-github mr-1"></i> GitHub
+            </a>
+            <a class="navbar-item" href="https://www.linkedin.com/in/gabriele-pappalardo-3621b2154/">
+                <i class="fab fa-linkedin-in mr-1"></i> Linkedin
+            </a>
+        </div>
+    </div>
+</nav>
     <div class="px-2 mb-3">
         <div class="container">
             <div class="titlebar">
@@ -28,17 +52,32 @@
                 </div>
             </div>
             <h1 class="title is-4 mb-3 px-2 monospace">
-                <span class='has-text-success'>~</span>/site<span>{{ page.subdir }}</span><span class="has-text-info">❯</span>
-                {% if page and page.command %}
-                    <span id="command" style='display: none;'>{{ page.command }}</span>
-                {% else %}
-                    <span id="command" style='display: none;'>less {{ page.title }}.html</span>
-                {% endif %}
+                <span class='has-text-success'>~</span>/site<span>/projects</span><span class="has-text-info">❯</span>
+                
+                    <span id="command" style='display: none;'>ls</span>
+                
             </h1>
             <div id="content" class="p-2" style="opacity: 0;">
-                {{ content }}
+                <ul>
+    
+        <li class="monospace is-size-5">
+             
+            
+            
+        </li>
+    
+        <li class="monospace is-size-5">
+             
+            
+            
+                <a href="/projects/ranch-the-sheep.html">ranch-the-sheep.html</a>
+            
+        </li>
+    
+</ul>
+
                 <div class="end monospace mt-4">
-                    {{ page.title }}.html (END)
+                    projects.html (END)
                 </div>
             </div>
         </div>

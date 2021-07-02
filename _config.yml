@@ -1,0 +1,8 @@
+source: .
+languages: ["en"]
+exclude_from_localizations: ["javascript", "images", "css"]
+collections:
+  projects:
+    output: true
+plugins:
+  - jekyll-multiple-languages-plugin
