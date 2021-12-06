@@ -61,10 +61,11 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  universal-darwin-21
 
 DEPENDENCIES
   jekyll
   jekyll-multiple-languages-plugin
 
 BUNDLED WITH
-   2.2.12
+   2.2.32

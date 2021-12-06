@@ -2,22 +2,75 @@
 title: index
 layout: default
 ---
-<h3 class="title is-3">
-    Hello there! 👋
-</h3>
-<div class="is-flex is-justify-content-center mt-2 mb-4">
-    <figure class="image is-128x128">
-        <img class="is-rounded" src="https://avatars.githubusercontent.com/u/14114916?s=460&u=12e4ac44130229e41595f7cde2ab703292ea5939&v=4">
-    </figure>
-</div>
-<p class="mt-5 has-text-justified">
-    Hi, I'm <b>Gabriele Pappalardo</b> (a.k.a. @gabryon or @gabryon99)! I'm <b>22</b> years old.
-    I'm a Computer Science Student at <a href='#'>University of Pisa</a> and a UI developer and UX Designer at <a class="ntop" href="https://ntop.org"><b>ntop</b></a>.
-    <br>
-    On this personal blog, I'm going to note things that I like (pretty much Computer Science stuff) and I'll use it
-    as a little portfolio for the people who don't know me. I would like to become a Game Developer since
-    videogames are my passion.
-    <br>
-    <br>
-    Feel free to see my <b>Github</b> page or my <a href="/projects">projects</a>!
-</p>
+<section class="presentation">
+    <h3 class="title is-3">
+        Hello there! 👋
+    </h3>
+    <div class="is-flex is-justify-content-center mt-2 mb-4">
+        <figure class="image is-128x128">
+            <img class="is-rounded"
+                src="https://avatars.githubusercontent.com/u/14114916?s=460&u=12e4ac44130229e41595f7cde2ab703292ea5939&v=4">
+        </figure>
+    </div>
+    <p class="mt-5 has-text-justified">
+        Hi, I'm <b>Gabriele Pappalardo</b> (a.k.a. @gabryon or @gabryon99)! I'm <b id="year">22</b> years old.
+        I'm a Computer Science Student at <a href='#'>University of Pisa</a> and I worked as UI developer and UX Designer at <a
+            class="ntop" href="https://ntop.org"><b>ntop</b></a>.
+        On this personal blog, I'm going to note things I like (pretty much Computer Science stuff) and I'll use it
+        as a little portfolio for the people who don't know me. I would like to become a Game Developer, since video games are my passion. I really like
+        <b>computers</b> and <b>game consoles</b> and usually, I try to discover how they work under the hood. I have a passion about <b>programming languages</b> and their implementation.
+    </p>
+</section>
+<hr>
+<section class="projects my-4">
+    <h4 class="title is-4">Projects</h4>
+    <p>To see my projects click <a href='/projects/'>here</a> or the "<i>Projects</i>" link inside the navbar.</p> 
+</section>
+<hr>
+<section class="papers my-4">
+    <h4 class="title is-4">
+        Papers and Presentations
+    </h4>
+    <p class="mt-4 has-text-justified">
+        Here are some presentations and papers I wrote for University projects:
+    </p>
+    <div class="content">
+        <h5 class="is-5 mt-4">2021</h5>
+        <ul class="">
+            <li>
+                <i>University Presentation</i>:<a
+                    href="https://pages.di.unipi.it/corradini/Didattica/AP-21/SLIDES/GabrielePappalardo-Just_In_Time_to_understand.pdf">"<b>Just
+                        In Time To Understand</b>": An introduction to how JIT compilers work under the hood</a>.<br>
+                        <b>Abstract</b>: This presentation illustrates a brief history about JIT compilers and how they are implemented
+                (conceptually speaking). This JIT compiler implementation uses the C++ programming language. The
+                presentation was made for "Advanced Programming" colleagues (<i>English 🇬🇧</i>)
+            </li>
+            <li>
+                <i>Bachelor <b>Thesis</b></i>: <a href="/assets/pdf/Thesis___Pappalardo___MeshLab.pdf">Improving the support for 3D scanned data in MeshLab and
+                    PyMeshLab</a>.<br>
+                <b>Abstract</b>: MeshLab, and its Python counterpart PyMeshLab, have been widely used for processing 3D scanned
+                data. However, some functionalities of MeshLab that are entirely interactive have not been transferred
+                into
+                the scriptable framework under Python. Moreover, an emerging file format for distributing scanned data
+                still
+                is not supported by MeshLab.
+                In this thesis, we have improved the capability of MeshLab to handle different kinds of 3D scanned data
+                by
+                adding the support for 3D scanned LIDAR data (E57). Moreover, by refactoring the core part of the
+                alignment
+                tools, we allowed higher flexibility in their usage in MeshLab and made them available in PyMeshLab.
+                (<i>English 🇬🇧</i>)
+            </li>
+            <li>
+                <i>University Project</i>: <a href="/assets/pdf/WorthAssignment.pdf">Relazione del Progetto di Laboratorio di Reti: Worth</a> (<i>Italian 🇮🇹</i>)<br>
+                The document summarize the creation process of the Network Lab course assignment: Worth, a tool similar to Trello.
+            </li>
+        </ul>
+        <h5 class="is-5 mt-4">2020</h5>
+        <ul>
+            <li>
+                <i>University Project</i>: <a href="/assets/pdf/RelazioneSOL.pdf">Relazione del Progetto Sistemi Operativi e Laboratorio</a> (<i>Italian 🇮🇹</i>)
+            </li>
+        </ul>
+    </div>
+</section>
