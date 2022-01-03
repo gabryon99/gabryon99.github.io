@@ -1,8 +1,10 @@
 source: .
 languages: ["en"]
 exclude_from_localizations: ["javascript", "images", "css"]
+url: "https://gabryon.me"
 collections:
   projects:
     output: true
 plugins:
   - jekyll-multiple-languages-plugin
+  - jekyll-sitemap
