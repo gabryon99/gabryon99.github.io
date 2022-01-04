@@ -3,6 +3,10 @@ code {
     white-space: pre-wrap;
 }
 
+code.inline {
+    display: inline;
+}
+
 .monospace, h1, h2 {
     font-family: 'Inconsolata', monospace;
 }
