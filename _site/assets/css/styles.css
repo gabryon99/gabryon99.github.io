@@ -1,15 +1,6 @@
-@media (prefers-color-scheme: dark) {
-    .end {
-        background: #4a4a4a !important;
-        color: white !important;
-    }
-    .titlebar {
-        background-color: #2A252F !important;
-        border-bottom-color: #000 !important;
-    }
-    .container {
-        border: 1px solid #414246 !important;
-    }
+code {
+    display: block;
+    white-space: pre-wrap;
 }
 
 .monospace, h1, h2 {
@@ -19,7 +10,8 @@
     letter-spacing: -1px;
 }
 .end {
-    background: #d2d2d2;
+    background: #4a4a4a;
+    color: white;
     font-weight: 600;
     padding: 0.1rem;
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
@@ -31,14 +23,14 @@
     color: #ff7500;
 }
 .container {
-    border: 1px solid #BDBDBD;
+    border: 1px solid #414246;
     border-radius: 0.25rem;
 }
 .titlebar {
+    background-color: #2A252F;
     height: 28px;
-    background-color: #EDEFF2;
-    border-bottom-color: #BDBDBD;
     border-bottom: 1px solid;
+    border-bottom-color: #000;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     margin-bottom: 0.25rem;

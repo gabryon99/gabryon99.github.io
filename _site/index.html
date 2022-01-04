@@ -92,6 +92,57 @@
 <section class="projects my-4">
     <h4 class="title is-4">Projects</h4>
     <p>To see my projects click <a href='/projects/'>here</a> or the "<i>Projects</i>" link inside the navbar.</p> 
+    <br>
+    <h5 class="title is-5">Currently Working Project</h4>
+    <p>
+        Right now, I'm developing an imperative programming language called "<b>mucomp-lang</b>" as an assignment for "<i>Languages, Compilers and Interpreters</i>"
+        course at University of Pisa. Since the professor gave us an embargo for at least one year, I cannot show the source code, yet. But,
+        if you are really interested into it, you can contact me using my student e-mail: <a href="mailto:g.pappalardo4@studenti.unipi.it">g.pappalardo4@studenti.unipi.it</a>.
+        <br>
+        <br>
+        Here it is a little code snippet about the programming language:<br>
+    </p>
+    <div class="columns">
+        <div class="column is-8">
+            <code>
+            component EntryPoint provides App {
+        
+                def fib(n: int): int {
+                    if (n == 0) {
+                        return 0;
+                    }
+            
+                    if (n == 1) {
+                        return 1;
+                    }
+            
+                    return fib(n - 1) + fib(n - 2);
+                }
+            
+                def main() : int {
+                    
+                    print(fib(10)); // prints 55
+                    return 0;
+                }
+            }
+            </code>
+        </div>
+        <div class="column">
+            <div style="text-align: center;">
+                <img src="./assets/img/projects/mucomp/comu-logo.png" style="scale: 1.4;" width="200" alt="mucomp-lang-logo" />
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Imperative;</li>
+                    <li>Statically type checked;</li>
+                    <li>Provides int, char, bool, float, references and arrays types;</li>
+                    <li>It uses <b>LLVM</b> to generate native code;</li>
+                    <li>Written using <b>OCaml</b> with Menhir, OCamllex and LLVM OCaml bindings;</li>
+                    <li>The mascotte's name is "<i>Comu</i>" = "🐄" + "μ" (like: "muuuh") (I know, it's a bad pun).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 <hr>
 <section class="papers my-4">
