@@ -105,26 +105,26 @@
     <div class="columns">
         <div class="column is-8">
             <code>
-            component EntryPoint provides App {
-        
-                def fib(n: int): int {
-                    if (n == 0) {
-                        return 0;
-                    }
-            
-                    if (n == 1) {
-                        return 1;
-                    }
-            
-                    return fib(n - 1) + fib(n - 2);
-                }
-            
-                def main() : int {
-                    
-                    print(fib(10)); // prints 55
-                    return 0;
-                }
-            }
+component EntryPoint provides App {
+
+    def fib(n: int): int {
+        if (n == 0) {
+            return 0;
+        }
+
+        if (n == 1) {
+            return 1;
+        }
+
+        return fib(n - 1) + fib(n - 2);
+    }
+
+    def main() : int {
+
+        print(fib(10)); // prints 55
+        return 0;
+    }
+}
             </code>
         </div>
         <div class="column">
