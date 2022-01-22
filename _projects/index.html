@@ -8,15 +8,15 @@ command: ls
     <h3 class="title is-3">
         Projects
     </h3>
-<ul>
-    {% for project in site.projects %}
-        <li class="monospace is-size-5">
-            {% assign l = project.url | size %} 
-            {% assign name = project.url | slice: 10, l %}
-            {% unless name == "index.html" %}
-                <a href="{{ project.url }}">{{ name }}</a>
-            {% endunless %}
-        </li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for project in site.projects %}
+            <li class="monospace is-size-5">
+                {% assign l = project.url | size %} 
+                {% assign name = project.url | slice: 10, l %}
+                {% unless name == "index.html" %}
+                    <a href="{{ project.url }}">{{ name }} - [[ {{ project.category }} ]]</a> 
+                {% endunless %}
+            </li>
+        {% endfor %}
+    </ul>
 </section>
