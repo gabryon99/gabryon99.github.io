@@ -1,0 +1,65 @@
+---
+title: mucomp-lang
+layout: default
+category: university project
+name: μcomp-lang 
+github: https://github.com/gabryon99/mucomp-lang
+report: /assets/pdf/mucomp___Languages__Compilers_and_Interpreters.pdf
+report_lang: English 🇬🇧
+subdir: <a href="/projects">/projects</a>
+---
+<div class="content">
+<p class="has-text-justified">
+    μcomp-lang is a simple component-based imperative language. The main features of the language are the following:
+    <ul>
+        <li> is statically type checked; </li>
+        <li>programs are made of components, which are linked together to form a whole program;</li>
+        <li>a component is stateful, there is only one instance of each component;</li>
+        <li>component behaviour specifications are given in terms of interfaces, which can be
+        provided or used by the components;</li>
+        <li>interfaces specify a set of functions and global variables to be provided by the interface’s provider (similar to the Java programming language);</li>
+        <li>components are statically linked to each other via their interfaces</li>
+    </ul>
+
+   The coe below shows a little program, that prints a greeting, using the μComp programming language.
+</p>
+<textarea id="code">
+interface StringPrinter {
+    def print_str(msg: char[], size: int): void;
+}
+component SimplePrinter provides StringPrinter {
+    def print_str(msg: char[], size: int): void {
+        var i: int;
+        for (i = 0; i < size; i++) putc(msg[i]);
+        return;
+    }
+}
+
+component Main provides App uses StringPrinter {
+    def main(): int {
+        var msg: char[6];
+        msg[0] = 'H';
+        msg[1] = 'e';
+        msg[2] = 'l';
+        msg[3] = 'l';
+        msg[4] = 'o';
+        msg[5] = '!';
+        print_str(msg, 6);
+        return 0;
+    }
+}
+
+connect Main.StringPrinter <- SimplePrinter.StringPrinter;
+</textarea>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        const code = document.getElementById('code');
+        const editor = CodeMirror.fromTextArea(code, {
+            lineNumbers: true,
+            theme: "material-darker",
+            readOnly: true,
+        });
+        editor.setSize("100%", "100%");
+    });
+</script>
