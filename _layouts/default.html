@@ -48,9 +48,26 @@
                         {{page.name}}
                     </h3>
                    <div class="is-align-self-baseline ">
-                    {% if page.date %}
-                    <span class="is-align-self-baseline"><i class="fas fa-calendar"></i> {{ page.date | date: "%-d %B %Y" }}</span>
+
+                    {% if page.category == "blog" %}
+                        {% capture read_time %}
+                        {{ page.content | number_of_words | divided_by: 180 }}
+                        {% endcapture %}
+
+                        <span class="is-align-self-baseline mr-2">
+                            <i class="fas fa-clock"></i>
+                            {% if read_time != '0' %}
+                            {{ read_time }}
+                            {% else %}
+                            1
+                            {% endif %} min. read
+                        </span>
+                        {% if page.date %}
+                        <span class="is-align-self-baseline mr-2"><i class="fas fa-calendar"></i> {{ page.date | date: "%-d %B %Y" }}</span>
+                        {% endif %}
                     {% endif %}
+
+           
                     {% if page.github %}
                     <a href="{{ page.github }}" class="mr-2"><i class="fab fa-github"></i> Repository</a>
                     {% endif %}
