@@ -5,6 +5,8 @@ url: "https://gabryon.me"
 collections:
   projects:
     output: true
+  blog:
+    output: true
 plugins:
   - jekyll-multiple-languages-plugin
   - jekyll-sitemap

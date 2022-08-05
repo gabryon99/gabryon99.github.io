@@ -1,0 +1,228 @@
+---
+title: visualizing-binary-tree
+layout: default
+category: blog
+name: Visualizing Binary Tree
+comments: true
+date: "05 August 2022"
+subdir: <a href="/blog">/blog</a>
+---
+<div class="content">
+  <h4 class="is-title is-4">The Story</h4>
+  <p class="has-text-justified">
+    Hello people! This is my first article on my personal blog, I've wait for so long before to write something.
+    Usually I don't have things to say, but I hope this experience may help someone. 
+  </p>
+  <br>
+  <p class="has-text-justified">
+    Many developers, when debugging programs, place some random <code>print</code> statement (instead of using a debugging tool such as <code>gdb, lldb</code>, but, anyway...). 
+    This simplistic approach (or the serious one) does not help in visualizing graph-like data structures, like <b>Binary Search Tree</b>!
+    <br>
+    I had to debug my implementation of Binary Search Tree (using C++ vectors with indices, instead of pointers) for the <i>Contest and Competitive Programming</i> course
+    at my university. Thus, I asked to myself: "Mhh, I remember that exist a tool to visualize tree better", I was no wrong! But, what was the name? Urgh...
+  </p>
+</div>
+<div class="columns is-vcentered">
+  <div class="column">
+    <div class="content">
+      <p class="has-text-justified">
+        Lost to myself, a thought cross my mind, where I saw that tool? I remember I was watching a video on YouTube, about Control Flow Graphs during compilation phases.
+        <br><br>
+        <b>That's it!</b>
+        <br><br>
+        The tool was <b>Graphviz</b>!
+          <blockquote class='is-info'>
+            <p>
+              Graphviz is open source graph visualization software. Graph visualization is a way of representing structural
+              information as diagrams of abstract graphs and networks. It has important applications in networking, bioinformatics,
+              software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
+            </p>
+            <b>- The Graphviz Authors</b> (<a href="https://www.graphviz.org">https://www.graphviz.org</a>)
+          </blockquote>
+      </p>
+    </div>
+  </div>
+  <div class="column">
+      <div class="is-flex is-justify-content-center">
+        <figure class="image" style="width: 20rem;">
+            <img src="https://media.tenor.co/images/d638daabb115a4669c6811d7bc4b2967/tenor.gif" alt="Winnie Pooh thinking">
+          <figcaption class="has-text-centered my-1">
+            <i>Me trying to remember the tool's name</i>
+          </figcaption>
+        </figure>
+      </div>
+  </div>
+</div>
+<div class="content">
+  <h4 class="is-title is-4">The Code</h4>
+  <p class="has-text-justified">
+    So, I read the documentation and went straight on to my code. I implemented a BFS traversal into my BST and generated Graphviz code.
+  </p>
+  <textarea class="code">
+  auto printEdge(std::stringstream& stream, NodeIndex from, NodeIndex to) -> void {
+    stream << "\t" << from << "->" << to << ";\n";
+  }
+
+  auto printInvisibleNode(std::stringstream& stream, NodeIndex from, int& invs) -> void {
+    stream << "\t" << invs << "[label=\"/\"];\n";
+    stream << "\t" << from << "->" << invs << ";\n";
+    invs++;
+  }
+
+  auto graphviz() -> std::string {
+
+    int invs = m_nodes.size();
+
+    std::stringstream stream;
+    std::deque<NodeIndex> indices{};
+    indices.push_back(root);
+
+    stream << "digraph BST {\n\tnode[ shape = plaintext ];\n";
+
+    while (!indices.empty()) {
+
+        auto index = indices.front();
+        indices.pop_front();
+
+        stream << "\t" << index << "[label=\"" << m_nodes[index].m_value << "\"];\n";
+
+        if (hasLeftChild(index)) {
+            printEdge(stream, index, getLeftChildIndex(index));
+            indices.push_back(getLeftChildIndex(index));
+        }
+        else {
+            printInvisibleNode(stream, index, invs);
+        }
+
+        if (hasRightChild(index)) {
+            printEdge(stream, index, getRightChildIndex(index));
+            indices.push_back(getRightChildIndex(index));
+        }
+        else {
+            printInvisibleNode(stream, index, invs);
+        }
+    }
+    
+    stream << "}";
+
+    return stream.str();
+  }
+  </textarea>
+  <br>
+  <p class="has-text-justified">
+    I think the code is explained by itself. It is a classic BFS and the Graphviz code is emitted using <code>std::stringstream</code>. Let's try the
+    code with a simple BST.
+  </p>
+  <textarea class="code">
+  auto main() -> int {
+    
+    // Yeah, I know. The namespace's identifier is long
+    using BinaryTree = cpc::ds::BinarySearchTreeV<int>;
+    
+    BinaryTree tree{50, 25, 75, 11, 33, 61, 89, 30, 40, 52, 89, 95};
+    std::cout << tree.graphviz(); 
+    
+    return 0;
+  }
+  </textarea>
+  <br>
+  <p class="has-text-justified">
+    And, here it is the output:
+  </p>
+  <textarea id="graphviz">
+  digraph BST {
+    node[ shape = plaintext ];
+    0[label="50"];
+    0->1;
+    0->2;
+    1[label="25"];
+    1->3;
+    1->4;
+    2[label="75"];
+    2->5;
+    2->6;
+    3[label="11"];
+    12[label="/"];
+    3->12;
+    13[label="/"];
+    3->13;
+    4[label="33"];
+    4->7;
+    4->8;
+    5[label="61"];
+    5->9;
+    14[label="/"];
+    5->14;
+    6[label="89"];
+    15[label="/"];
+    6->15;
+    6->10;
+    7[label="30"];
+    16[label="/"];
+    7->16;
+    17[label="/"];
+    7->17;
+    8[label="40"];
+    18[label="/"];
+    8->18;
+    19[label="/"];
+    8->19;
+    9[label="52"];
+    20[label="/"];
+    9->20;
+    21[label="/"];
+    9->21;
+    10[label="89"];
+    22[label="/"];
+    10->22;
+    10->11;
+    11[label="95"];
+    23[label="/"];
+    11->23;
+    24[label="/"];
+    11->24;
+  }
+  </textarea>
+  <br>
+  <p class="has-text-justified">
+    Now, putting the code in a Graphviz editor we obtain the following image. 
+  </p>
+  <figure class="image">
+    <img src="/assets/img/blog/graphviz.png">
+  </figure>
+</div>
+<div class="content">
+  <h4 class="is-title is-4">Conclusion</h4>
+  <p class="has-text-justified">
+    I hope this wall-text (and code) can help someone to visualize a graph-based data structure to understand what is going
+    on.
+    <br>
+    <br>
+    <b>P.S.</b> I discovered that Eli Bendersky already did an article about this stuff, I leave the link <a
+      href="https://eli.thegreenplace.net/2009/11/23/visualizing-binary-trees-with-graphviz">here</a> (take a look!).
+  </p>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    const areas = document.getElementsByClassName('code');
+
+    const graphviz = document.getElementById('graphviz');
+    const graphvizEditor = CodeMirror.fromTextArea(graphviz, {
+      lineNumbers: true,
+      theme: "material-darker",
+      readOnly: true,
+    });
+    graphvizEditor.setSize("100%", "100%");
+
+    for (const area in areas) {
+      const editor = CodeMirror.fromTextArea(areas[area], {
+        lineNumbers: true,
+        theme: "material-darker",
+        mode: "text/x-csrc",
+        readOnly: true,
+      });
+      editor.setSize("100%", "100%");
+    }
+  });
+</script>

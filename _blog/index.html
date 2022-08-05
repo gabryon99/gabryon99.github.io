@@ -1,0 +1,24 @@
+---
+title: blog
+layout: default
+subdir: /blog
+command: ls
+---
+<section class="articles">
+  <h3 class="title is-3">
+    Blog
+  </h3>
+  <ul>
+    {% for article in site.blog %}
+    <li class="monospace is-size-5">
+      
+      {% assign l = article.url | size %}
+      {% assign name = article.url | slice: 6, l %}
+      {% unless name == "index.html" %}
+      <a href="{{ article.url }}">{{ name }} - [[ {{ article.date | date: "%-d %B %Y" }} ]]</a>
+      {% endunless %}
+
+    </li>
+    {% endfor %}
+  </ul>
+</section>
