@@ -48,6 +48,9 @@
                         {{page.name}}
                     </h3>
                    <div class="is-align-self-baseline ">
+                    {% if page.date %}
+                    <span class="is-align-self-baseline"><i class="fas fa-calendar"></i> {{ page.date | date: "%-d %B %Y" }}</span>
+                    {% endif %}
                     {% if page.github %}
                     <a href="{{ page.github }}" class="mr-2"><i class="fab fa-github"></i> Repository</a>
                     {% endif %}
