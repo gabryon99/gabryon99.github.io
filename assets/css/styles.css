@@ -2,12 +2,12 @@ pre, code {
     font-family: monospace, monospace;
 }
 pre {
-overflow: auto;
+    overflow: auto;
 }
 pre > code {
-display: block;
-padding: 1rem;
-word-wrap: normal;
+    display: block;
+    padding: 1rem;
+    word-wrap: normal;
 }
 
 .monospace, h1, h2 {
@@ -17,8 +17,8 @@ word-wrap: normal;
     letter-spacing: -1px;
 }
 .end {
-    background: #4a4a4a;
-    color: white;
+    background-color: #c1c1c1;
+    color: black;
     font-weight: 600;
     padding: 0.1rem;
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
@@ -30,14 +30,14 @@ word-wrap: normal;
     color: #ff7500;
 }
 .container {
-    border: 1px solid #414246;
+    border: 1px solid #bdbdbd;
     border-radius: 0.25rem;
 }
 .titlebar {
-    background-color: #2A252F;
+    background-color: #e2e4e6;
     height: 28px;
     border-bottom: 1px solid;
-    border-bottom-color: #000;
+    border-bottom-color: #bdbdbb;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     margin-bottom: 0.25rem;
@@ -66,4 +66,18 @@ word-wrap: normal;
     width: auto;
     white-space: nowrap;
     overflow-y: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+   .titlebar {
+        background-color: #2A252F;
+        border-bottom-color: #000;
+   }
+   .container {
+        border: 1px solid #414246;
+   }
+   .end {
+        background: #4a4a4a;
+        color: white;
+   }
 }
