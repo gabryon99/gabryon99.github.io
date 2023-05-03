@@ -29,6 +29,9 @@ pre > code {
 .ntop {
     color: #ff7500;
 }
+.kotlin {
+    color: #7F52FF;
+}
 .container {
     border: 1px solid #bdbdbd;
     border-radius: 0.25rem;
