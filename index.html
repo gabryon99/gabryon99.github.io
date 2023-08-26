@@ -9,12 +9,18 @@ layout: default
     <div class="columns">
         <div class="column is-9">
             <p class="has-text-justified">
-                Hi, I'm <b>Gabriele Pappalardo</b> (a.k.a. @gabryon or @gabryon99)! I'm <b id="year">23</b> years old.
-                I'm a Master Computer Science student @ <a href='#'>University of Pisa</a> and an Exchange Student @ <a href="https://www.cit.tum.de/cit/startseite/">TUM</a>. Currently, I am a Software Developer Intern @ <a href="https://jetbrains.com">JetBrains</a>, and I am working on a Verification Framework for the <b class='kotlin'>Kotlin</b> programming language. I obtained my <b>Computer Science bachelor</b> in October 2021 (in Pisa) with my thesis entitled 
-                    <b>Improving the support for 3D scanned data in MeshLab and PyMeshLab</b> (see the section below).<br><br>
+                Hi, I'm <b>Gabriele Pappalardo</b> (a.k.a. @gabryon / @gabryon99)! I'm <b id="year">24</b> years old.
+                I'm a Master Computer Science student @ <a href='#'>University of Pisa</a> and an Exchange Student @ <a href="https://www.cit.tum.de/cit/startseite/">TUM</a>. 
+                Currently, I am a Software Developer Intern @ <a href="https://jetbrains.com">JetBrains</a>, and I am working on a Verification Framework for 
+                the <b class='kotlin'>Kotlin</b> programming language using the <a alt="Viper Verification Infrastructure" href="https://viper.ethz.ch/">Viper Verification Infrastructure</a>.<br><br> 
+
+                Right now (August 2023), I am finishing up my master thesis in collaboration with JetBrains. The thesis title is <b>Extending Kotling with Algebraic Effect Handlers</b>: we are trying
+                to understand if the Kotlin programming language has room for algebraic effect handlers. We a small library prototype showing the feasibility of the project, for more information click [here](https://github.com/gabryon99).
+                I obtained my <b>BSc in Computer Science</b> in October 2021 (in Pisa) with my thesis entitled 
+                    <b>Improving the support for 3D scanned data in MeshLab and PyMeshLab</b>, implementing the support for new file formats and plugins in Python (see the section below).<br><br>
+                
                 On this personal blog, I'm going to note things I like (pretty much Computer Science stuff) and I'll use it
-                as a little portfolio for the people who don't know me. I would like to become a Game Developer, since video games are my passion. I really like
-                <b>computers</b> and <b>game consoles</b> and usually, I try to discover how they work under the hood. I have a passion about <b>programming languages</b> and their implementation.
+                as a little portfolio for the people who don't know me. I love <b>computers</b> and <b>game consoles</b> and usually, I try to discover how they work under the hood. I have a passion about <b>programming languages</b> and their implementation.
             </p>
         </div>
         <div class="column">
@@ -74,6 +80,9 @@ layout: default
     <div class="content">
         <ul>
             <li>
+                <b>Unikraft PIE Applications</b>: during an hackathon in Munich, a team of coalleagues and me implemented the support for the [PHP runtime](https://www.github.com/unikraft/static-pie-apps) in Unikraft. Check this website [here](https://unikraft.org/) about the Unikraft project.
+            </li>
+            <li>
                 <b>ntopng</b>: see GitHub repository <a href='https://github.com/ntop/ntopng'>here</a> and <a href="https://www.ntop.org/products/traffic-analysis/ntop/">https://www.ntop.org/products/traffic-analysis/ntop/</a> for further details.
             </li>
             <li>
@@ -88,9 +97,19 @@ layout: default
 <hr>
 <section class="papers my-4">
     <h4 class="title is-4">
-        Papers and Presentations
+        (Not published) Papers and Presentations
     </h4>
     <div class="content">
+        <h5 class="is-5 mt-4">2023</h5>h5>
+        <li>
+            <i>Review Paper</i>:<b>A Comprehensive Review of Kotlin Coroutines</b><br>
+            <b>Abstract</b>: Asynchronous programming is a technique highly in use during the last decade. The need for responsive applications, with high throughput and low-latency, has never been so important as it is today. 
+            Following this trend, mainstream programming languages, such as C++, Rust, Java, Go, Swift; have introduced features to enable asynchronous programming. 
+            However, these constructs may not be immediate to the programmer. The following paper will focus on the Kotlin programming language, 
+            and its pragmatic approach to asynchronous programming, with the use of coroutines and their modeling through structured concurrency. 
+            In addition, we will explore how the Kotlin compiler compiles down coroutines in JVM bytecode, using a **continuation-passing style (CPS)**
+            compilation with **finite state machines**.
+        </li>
         <h5 class="is-5 mt-4">2021</h5>
         <ul class="">
             <li>
@@ -125,5 +144,7 @@ layout: default
     <h5 class="is-5 title">
         Did you know?
     </h5>
-    <p>If your operating system supports Dark Mode this website will be adapt itself using the <code class="inline">@media (prefers-color-scheme: dark)</code> CSS query. <b>Try it now!</b></p>
+    <p>
+        If your operating system supports Dark Mode this website will be adapt itself using the <code class="inline">@media (prefers-color-scheme: dark)</code> CSS query. 
+    </p>
 </section>
