@@ -2,11 +2,11 @@
 title: blog
 layout: default
 subdir: /blog
-command: ls
+command: cd ./blog && ls
 ---
 <section class="articles">
   <h3 class="title is-3">
-    Blog
+    Blog <small>(big term for only one article)</small>
   </h3>
   <ul>
     {% for article in site.blog %}
